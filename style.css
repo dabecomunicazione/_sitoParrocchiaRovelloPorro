@@ -1,0 +1,272 @@
+body, html{font-family: Open Sans;}
+hr{max-width: 1300px;}
+h3{font-size: 25px; color: #EBAF1E;}
+
+/* Accordion */
+.accordion__text{width: 100%; height: 50px; margin: auto; border: none; background-color: #EBAF1E;}
+.accordion__content img {
+    width: 100%;
+    height: auto;
+    margin-top: 4px;
+  }
+
+  button.active {background: #EEE;}
+  button.active::after{content: '\25b4'; float: center; margin-left: 10px; transform: scale(1.0);}
+  button.accordion__text::after{content: '\25be'; float: center; margin-left: 10px; transform: scale(1);}
+  button.accordion__text:focus{outline-width: 0px;}
+/* !a Tag */
+a{text-decoration: none; color: #897777;}
+a:hover{color: #fff; background-color: #EBAF1E; }
+
+/*! Slider */
+.slidershow{
+  width: 1300px;
+  height: 800px;
+  overflow: hidden;
+  padding: 15px 0;
+}
+
+.middle{
+  position: relative;
+  margin: auto;
+}
+
+.navigation{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.bar{
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s infinite;
+}
+.bar:hover{
+  background: #fff;
+}
+
+input[name="r"]{
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slide{
+  width: 20%;
+  transition: 0.6s;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+#r1:checked ~ .s1{
+  margin-left: 0%
+}
+
+#r2:checked ~ .s2{
+  margin-left: -20%
+}
+
+#r7:checked ~ .s7{
+  margin-left: 0%
+}
+
+#r8:checked ~ .s8{
+  margin-left: -20%
+}
+/* ! Header*/
+.header{
+  background-color: #EAE9EA;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 100px;
+  z-index: 3;
+  position: fixed;
+  top:0;
+  width: 100%;}
+}
+
+.header__menu ul{list-style-type: none; padding: 0;}
+.header__menu ul li{display: inline-block;}
+.header__menu ul li a{padding: 10px; display: inline-block;}
+
+.header_logo img {height: 100px; margin-top: -25px;}
+.header_cta{border: 3px solid #000; width: 100px; padding: 18px;text-align: center;}
+.header__hamburger{display: none;}
+
+/* ! Hero*/
+.hero{padding: 100px; background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(204, 204, 204, 0.6)), url('asset/img/copertinaTempoPasquale.jpg'); background-repeat: no-repeat;
+background-size: cover; -o-background-size: cover; -moz-background-size: cover; background-position: center center; height: 70vh; position: relative; z-index: 1;}
+h1{font-size: 55px; max-width: 1200px; margin-top: 30vh; color: #fff;}
+.hero-santuario{padding: 100px; background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(204, 204, 204, 0.6)), url('asset/img/santuario/santuarioCover.jpg'); background-repeat: no-repeat;
+background-size: cover; -o-background-size: cover; -moz-background-size: cover; background-position: center center; height: 90vh; position: relative; z-index: 1;}
+
+
+/* Marquee */
+marquee{padding: 25px;font-size: 30px; font-weight: 400;font-family: 'Open Sans'; color: #EBAF1E;}
+
+/* ! Grid */
+.grid{display:flex; flex-wrap: wrap; justify-content: space-between; max-width: 1300px; margin: 50px auto;}
+.grid_post{flex-basis: 32%; padding: 30px;}
+.grid_post img{width: 100%; height: auto;}
+.grid_post h3{font-size: 25px; color: #EBAF1E;}
+.grid_post p{font-size: 16px;}
+
+.grid_post--diocesi{
+  border: 2px solid #EBAF1E; max-width: 1250px; margin: 30px auto; padding: 20px;
+}
+.grid_post--diocesi h3 {
+  text-align: center; font-size: 40px;
+}
+
+/* ! multi-column */
+.multi-column{flex-basis: 48%; flex-wrap: wrap; max-width: 1300px; margin: 0px auto; padding: 35px; padding-top: 0px;}
+.multi-column img {width: 100%; margin: 30px 0; }
+.multi-column h3 {margin-top: 0px;}
+
+/*Settimana santa sussidi */
+.sussidi{display: flex; flex-wrap: wrap; justify-content: space-between; padding-top:30px;}
+button {height: 70px; flex-basis: 48%; border: 2px solid #EBAF1E;}
+
+/* ! Contatti */
+.contatti{display:flex; flex-wrap: wrap; justify-content: space-between; max-width: 1300px; margin: 20px auto;}
+.contatti_info{flex-basis: 48%; line-height: 24px;}
+.contatti button {width: 45%; height: 40px; padding: 10px; margin-right: 10px;}
+
+/* ! Top button */
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: 1px solid #eee; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #eee; /* Set a background color */
+  color: #000; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 0px !important;  /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+.icon-arrow-up{height: 30px; }
+
+#myBtn:hover {
+  background-color: #EBAF1E; /* Add a dark-grey background on hover */
+  color: #fff;
+}
+/*! Footer */
+.footer{
+  height: 300px;
+  width: 100%;
+  background: #897777;
+  color: #fff;
+  padding: 20px;
+}
+.footer_structure {display: flex; justify-content: space-between; max-width: 1300px; margin: auto;}
+.footer_structure--info{margin:0px auto; height: 50px; max-width: 1300px; display: flex; justify-content: space-between;}
+.footer_logo{display: inline-block;flex-basis: 50%;}
+
+.footer_info{flex-basis: 50%; line-height: 50px;}
+.footer_social{flex-basis: 25%;}
+.footer_social ul {list-style-type: none; padding: 0; margin: 0px;}
+.footer_social ul li {display: inline-block; width: 25%;}
+.footer_logo img {height: 200px;}
+
+
+
+/* -------------------------------------------------------------------------------- */
+/* ! Tablet */
+/* -------------------------------------------------------------------------------- */
+
+/* single-column */
+.single-column{padding: 50px;}
+
+/* -------------------------------------------------------------------------------- */
+/* ! Smartphone */
+/* -------------------------------------------------------------------------------- */
+
+@media (max-width: 767px ) {
+hr{margin: 30px;}
+/* ! Hero */
+  .hero{padding: 50px;}
+  .hero-santuario {height: 100vh;}
+  .hero-santuario h1 {margin-top: 30vh; font-size: 22px;}
+  h1{font-size: 25px; margin-top: 45vh; text-align: center;}
+
+  .hero-santuario{padding: 50px;}
+
+/* ! Caroseul */
+.slidershow{
+  width: 42px;
+  height: auto;
+  overflow: hidden;
+}
+
+
+
+
+/* ! Grid */
+  .grid{margin-top: 25px;}
+  .grid_post{flex-basis: 100%;}
+  .grid_post--diocesi img {
+    height: auto; width: 100%;
+  }
+  .grid_post--diocesi{margin: 30px;}
+
+  /* single-column */
+  .single-column{margin: 0px auto; padding: 0px 35px;}
+  /* ! multi-column */
+  .multi-column{flex-basis: 100%;}
+
+/* ! Menu */
+.header__menu {position: absolute; max-height: 0; top: 100px; left: 0; width: 100%; overflow: hidden; background-color:#EAE9EA; transition: all 0.5s ease;}
+.header__menu ul li {display: block; text-align: center;}
+
+.header__hamburger{display: block; width: 60px; text-align: right;padding-top: 10px;}
+
+.header__menu--open {max-height: 1000px;}
+
+/* ! Cta */
+.header_cta{border: none; border-bottom: 2px solid #000; width: 100px; padding: 18px;text-align: center;}
+
+/*Sussidi Settimana santa */
+button {flex-basis: 100%; margin-bottom: 5px;}
+
+/* ! Contatti */
+.contatti_info{flex-basis: 100%; margin: 30px;}
+iframe{width: 100%;}
+.contatti button {width: 100%; height: 40px; margin-bottom: 10px;}
+
+/*! Footer */
+.footer{height: 400px}
+.footer_logo{margin: auto;}
+.footer_structure--info{flex-wrap: wrap;}
+.footer_info{flex-basis: 100%; line-height: 20px; margin-top: 20px;}
+.footer_social{flex-basis: 100%;}
+.footer_social ul li {margin: 20px auto;}
+}
+
+/* ! Box Sizing */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
