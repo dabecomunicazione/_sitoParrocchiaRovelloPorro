@@ -1,14 +1,34 @@
 body, html{font-family: Open Sans;}
 hr{max-width: 1300px;}
+.spacer{padding: 25px;}
 h3{font-size: 25px; color: #EBAF1E;}
+.listaDistanziata li{
+  margin: 10px 0;
+}
+.festaMadonnaC {
+  color: rgb(10,97,174)
+}
+.fb-share-button{
+  margin: auto;
+}
 
 /* Accordion */
+ul {padding: 0;}
 .accordion__text{width: 100%; height: 50px; margin: auto; border: none; background-color: #EBAF1E;}
 .accordion__content img {
     width: 100%;
     height: auto;
     margin-top: 4px;
   }
+.accordion__content li {
+  list-style-type: none;
+}
+.numero {
+  text-align: right;
+  border-bottom: 0.25px dotted #000;
+  margin-block-start: auto;
+  font-weight: 600;
+}
 
   button.active {background: #EEE;}
   button.active::after{content: '\25b4'; float: center; margin-left: 10px; transform: scale(1.0);}
@@ -96,7 +116,7 @@ input[name="r"]{
   height: 100px;
   z-index: 3;
   position: fixed;
-  top:0;
+  top: 0;
   width: 100%;}
 }
 
@@ -109,22 +129,34 @@ input[name="r"]{
 .header__hamburger{display: none;}
 
 /* ! Hero*/
-.hero{padding: 100px; background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(204, 204, 204, 0.6)), url('asset/img/copertinaTempoPasquale.jpg'); background-repeat: no-repeat;
-background-size: cover; -o-background-size: cover; -moz-background-size: cover; background-position: center center; height: 70vh; position: relative; z-index: 1;}
-h1{font-size: 55px; max-width: 1200px; margin-top: 30vh; color: #fff;}
+.hero{padding: 100px; background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(204, 204, 204, 0.6)), url('asset/img/hero_avvento.jpg'); background-repeat: no-repeat;
+background-size: cover; -o-background-size: cover; -moz-background-size: cover; background-position: top center; height: 70vh; position: relative; z-index: 1;}
+h1{font-size: 55px; max-width: 1200px; margin-top: 30vh; margin-bottom: 5vh; color: #fff;}
 .hero-santuario{padding: 100px; background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(204, 204, 204, 0.6)), url('asset/img/santuario/santuarioCover.jpg'); background-repeat: no-repeat;
 background-size: cover; -o-background-size: cover; -moz-background-size: cover; background-position: center center; height: 90vh; position: relative; z-index: 1;}
-
-
+.hero-estate{padding: 100px; background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.6)), url('../assetT/img-headerSummer.jpg'); background-repeat: no-repeat;
+background-size: cover; -o-background-size: cover; -moz-background-size: cover; background-position: center top; height: 50vh; position: relative; z-index: 1;}
+.hero-festa {height: 40vh; background: linear-gradient(0deg, rgba(255,255,255,0.5), rgba(10,97,174, 0.5)), url('asset/img/santuario/007.jpg'); background-repeat: no-repeat;
+background-size: cover; -o-background-size: cover; -moz-background-size: cover; background-position: center center; ; padding: 100px; padding-top: 70px;}
+.hero-catechesi {height: 70vh; background: url('asset/img/iniziazioneCristiana.png'); background-repeat: no-repeat;
+background-size: cover; -o-background-size: cover; -moz-background-size: cover; background-position: center bottom;}
+.button {height: 70px; border: 2px solid #fff; color: #fff; padding: 13px;}
+h2{font-size: 55px; max-width: 1200px; margin-top: 0; margin-bottom: 10px; color: #fff;}
+.subtitle,.date{font-size: 30px; color: #fff; margin-top: 10px;}
+.date{margin-top: 0vh;}
 /* Marquee */
 marquee{padding: 25px;font-size: 30px; font-weight: 400;font-family: 'Open Sans'; color: #EBAF1E;}
 
 /* ! Grid */
 .grid{display:flex; flex-wrap: wrap; justify-content: space-between; max-width: 1300px; margin: 50px auto;}
+.grid h1{color: #000; font-size: 32px; padding: 0; margin: 0;}
 .grid_post{flex-basis: 32%; padding: 30px;}
 .grid_post img{width: 100%; height: auto;}
 .grid_post h3{font-size: 25px; color: #EBAF1E;}
 .grid_post p{font-size: 16px;}
+.grid_post .icon  {text-align: center; padding-bottom: 20px; font-size: 100px;}
+.icon a{color: #ccc;}
+.icon a:hover{color: #EBAF1E; background: #fff; font-size: 120px;}
 
 .grid_post--diocesi{
   border: 2px solid #EBAF1E; max-width: 1250px; margin: 30px auto; padding: 20px;
@@ -164,7 +196,7 @@ button {height: 70px; flex-basis: 48%; border: 2px solid #EBAF1E;}
   font-size: 18px; /* Increase font size */
 }
 
-.icon-arrow-up{height: 30px; }
+.icon-arrow-up{height: 30px;}
 
 #myBtn:hover {
   background-color: #EBAF1E; /* Add a dark-grey background on hover */
@@ -196,21 +228,23 @@ button {height: 70px; flex-basis: 48%; border: 2px solid #EBAF1E;}
 
 /* single-column */
 .single-column{padding: 50px;}
+.hero{padding: 50px; height: 80vh;}
 
 /* -------------------------------------------------------------------------------- */
 /* ! Smartphone */
 /* -------------------------------------------------------------------------------- */
 
-@media (max-width: 767px ) {
+@media (max-width: 767px) {
 hr{margin: 30px;}
 /* ! Hero */
-  .hero{padding: 50px;}
-  .hero-santuario {height: 100vh;}
-  .hero-santuario h1 {margin-top: 30vh; font-size: 22px;}
-  h1{font-size: 25px; margin-top: 45vh; text-align: center;}
-
-  .hero-santuario{padding: 50px;}
-
+  .hero{padding: 50px; height: 80vh;}
+  .hero-festa{padding: 10px;}
+  h1, h2{font-size: 25px; margin-top: 30vh; margin-bottom: 5vh;}
+  .hero a {font-size: 12px;}
+  h2{margin-top: 5vh; font-size: 27px;}
+  .subtitle,.date{font-size: 14px; color: #fff; margin-top: 10px; text-align: center;}
+  .date{margin-top: 0vh;}
+  .festaMadonnaC h3{font-size: 18px; }
 /* ! Caroseul */
 .slidershow{
   width: 42px;
